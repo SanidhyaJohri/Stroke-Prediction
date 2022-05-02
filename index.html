@@ -1,0 +1,329 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Stroke Prediction</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+	<link rel="icon" type="image/x-icon" href="images/favicon.png">
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Themify Icons-->
+	<link rel="stylesheet" href="css/themify-icons.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
+
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="css/bootstrap-datepicker.min.css">
+
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	</head>
+	<body>
+		
+	<div class="gtco-loader"></div>
+	
+	<div id="page">
+
+	
+	<!-- <div class="page-inner"> -->
+	<nav class="gtco-nav" role="navigation">
+		<div class="gtco-container">
+			
+			<div class="row">
+				<div class="col-sm-4 col-xs-12">
+					<div id="gtco-logo"><a href="index.html">Stroke Prediction <em>.</em></a></div>
+				</div>
+			</div>
+			
+		</div>
+	</nav>
+	
+	<header id="gtco-header" class="gtco-cover gtco-cover-md" role="banner" style="background-image: url(images/img_bg_2.jpg);width:100%;height:100%;">
+		<div class="overlay"></div>
+		<div class="gtco-container">
+			<div class="row">
+				<div class="col-md-12 col-md-offset-0 text-left">
+
+					<div class="row row-mt-15em">
+						<div class="col-md-7 mt-text animate-box" data-animate-effect="fadeInUp">
+							<h1><b>Predict Your Risk of Stroke Today!!!</b></h1>	
+							<h2 id="predictedStroke" style="display:none; font-size: xx-large;"></h2>
+						</div>
+						<div class="col-md-4 col-md-push-1 animate-box" data-animate-effect="fadeInRight">
+							<div class="form-wrap" >
+								<div class="tab">
+
+									
+									<div class="tab-content">
+										<div class="tab-content-inner active" data-content="signup">
+											<h3>Person Details:	</h3>
+											<form action="#">
+
+												<div class="row form-group">
+													<div class="col-md-6">
+														<label for="gender">Gender: </label>
+														<select name="#" id="gender" class="form-control">
+															<option value=''>--Select--</option>
+															<option value=1>Male</option>
+															<option value=0>Female</option>
+														</select>
+													</div>
+
+													<div class="col-md-6">
+														<label for="date-start">Age: </label>
+														<input type="text" id="age" class="form-control">
+													</div>
+												</div>
+
+												<div class="row form-group">
+													<div class="col-md-6">
+														<label for="hypertension">HyperTension: </label>
+														<select name="#" id="hypertension" class="form-control">
+															<option value=''>--Select--</option>
+															<option value=1>Yes</option>
+															<option value=0>No</option>
+														</select>
+													</div>
+													<div class="col-md-6">
+														<label for="married">Are You Married?: </label>
+														<select name="#" id="married" class="form-control">
+															<option value=''>--Select--</option>
+															<option value=1>Yes</option>
+															<option value=0>No</option>
+														</select>
+													</div>
+												</div>
+
+												<div class="row form-group">
+													<div class="col-md-6">
+														<label for="worktype">Work Type:</label>
+														<select name="#" id="worktype" class="form-control">
+															<option value=''>--Select--</option>
+															<option value=0>Government Job</option>
+															<option value=1>Unemployed</option>
+															<option value=2>Private</option>
+															<option value=3>Self-Employed</option>
+															<option value=4>Children</option>
+														</select>
+													</div>
+													<div class="col-md-6">
+														<label for="residence">Residence Type:</label>
+														<select name="#" id="residence" class="form-control">
+															<option value=''>--Select--</option>
+															<option value=0>Rural</option>
+															<option value=1>Urban</option>
+														</select>
+													</div>
+												</div>
+
+												<div class="row form-group">
+													
+												</div>
+
+												<div class="row form-group">
+													<div class="col-md-6">
+														<label for="smoking">Smoking Status:</label>
+														<select name="#" id="smoking" class="form-control">
+															<option value=''>--Select--</option>
+															<option value=0>Don't Know about Smoking</option>
+															<option value=1>Formerly Smoked</option>
+															<option value=2>Never Smoked</option>
+															<option value=3>Smoke Regularly</option>
+														</select>
+													</div>
+													
+													<div class="col-md-6">
+														<label for="heart">Heart Disease:</label>
+														<select name="#" id="heart" class="form-control">
+															<option value=''>--Select--</option>
+															<option value=0>No</option>
+															<option value=1>Yes</option>
+														</select>
+													</div>
+													
+												</div>
+
+												<div class="row form-group">
+													<div class="col-md-6">
+														<label for="glucose">Glucose Level: </label>
+														<input type="text" id="glucose" class="form-control">
+													</div>
+
+													<div class="col-md-6">
+														<label for="bmi">BMI:</label>
+														<input type="text" class="form-control" id="bmi" name="duration"/>
+													</div>
+												</div>
+
+												<div class="row form-group">
+													<div class="col-md-12">
+														<button type="button" onclick='validate()' class="btn btn-primary btn-block">Submit</button>
+														<!-- <input type="submit" class="btn btn-primary btn-block" value="Submit"> -->
+													</div>
+												</div>
+											</form>	
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>	
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- Script to predict the Price Starts Here-->
+	<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.5.2/dist/tf.min.js"></script>
+
+	<script>
+		tf.loadLayersModel("NeuralNet/model.json").then(function(model) {
+			window.model = model;
+			console.log("my model loaded");
+			});
+
+		function validate(){
+			var gender = document.getElementById('gender').value;
+			var age = document.getElementById('age').value;
+			var hypertension = document.getElementById('hypertension').value;
+			var married= document.getElementById('married').value;
+			var worktype = document.getElementById('worktype').value;
+			var residence = document.getElementById('residence').value;
+			var smoking = document.getElementById('smoking').value;
+			var heart= document.getElementById('heart').value;
+			var glucose= document.getElementById('glucose').value;
+			var bmi= document.getElementById('bmi').value;
+
+
+			if(gender==''){
+				alert("Select Gender");
+			}
+			else if(age==''){
+				alert("Enter Age");
+			}
+			else if(hypertension==''){
+				alert("Select HyperTension");
+			}
+			else if(married==''){
+				alert("Enter Married Status");
+			}
+			else if(worktype ==''){
+				alert("Enter Work Status");
+			}
+			else if(residence==''){
+				alert("Enter Residence Type");
+			}
+			else if(smoking ==''){
+				alert("Enter Smoking Status");
+			}
+			else if(heart ==''){
+				alert("Enter Status of Heart Disease");
+			}
+			else if(glucose ==''){
+				alert("Enter Glucose Level");
+			}
+			else if(bmi ==''){
+				alert("Enter BMI");
+			}
+			else{
+				predict();
+			}
+		}
+		function predict(){
+			// Fetching data from front-end and Pre-Processing
+			var input=[];
+
+			var gender = document.getElementById("gender").value;
+
+			var age = document.getElementById("age").value
+
+			var hypertension = document.getElementById('hypertension').value
+
+			var married = document.getElementById('married').value
+
+			var worktype = document.getElementById("worktype").value;
+
+			var residence = document.getElementById("residence").value;
+			
+			var smoking = document.getElementById("smoking").value;
+
+			var heart = document.getElementById("heart").value;
+
+			var glucose = document.getElementById("glucose").value;
+
+			var bmi = document.getElementById("bmi").value;
+
+			input=[parseInt(gender),parseInt(age),parseInt(hypertension),parseInt(heart),parseInt(married),parseInt(worktype),parseInt(residence),parseFloat(glucose),parseFloat(bmi),parseInt(smoking)];
+
+			// Convert input array to tensor of shape 1x12 and predict the price
+
+			window.model.predict([tf.tensor(input).reshape([1,10])]).array().then(function(scores){
+				scores = scores[0];
+				predicted = scores.indexOf(Math.max(...scores));
+				document.getElementById('predictedStroke').style.display="block";
+				// document.getElementById('boxPricePredicted').style.display="block";
+
+				if(predicted > 0){
+					var result = 'High';
+				}
+				else{
+					var result = 'Low';
+				}
+				console.log(result);
+				document.getElementById('predictedStroke').innerHTML="Risk Of Stroke :" + result; 
+
+			});
+		}
+
+	</script>
+	
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Carousel -->
+	<script src="js/owl.carousel.min.js"></script>
+	<!-- countTo -->
+	<script src="js/jquery.countTo.js"></script>
+
+	<!-- Stellar Parallax -->
+	<script src="js/jquery.stellar.min.js"></script>
+
+	<!-- Magnific Popup -->
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/magnific-popup-options.js"></script>
+	
+	<!-- Datepicker -->
+	<script src="js/bootstrap-datepicker.min.js"></script>
+	
+
+	<!-- Main -->
+	<script src="js/main.js"></script>
+
+	</body>
+</html>
+
