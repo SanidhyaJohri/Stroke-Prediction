@@ -1,7 +1,7 @@
 # Stroke-Prediction
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1mhtekhoeItRI8iAH9Q-iEi7D-FaCmR-9?usp=sharing)
 ## Overview
-- Stroke is the 2nd leading cause of death globally, responsible for approximately 11% of total deaths. The given dataset can be used to predict whether a patient is likely to get a stroke based on the input parameters like gender, age, various diseases, and smoking status.
+- Stroke is the 2nd leading cause of death globally, responsible for approximately 11% of total deaths. The given dataset can be used to predict whether a patient is likely to get a stroke based on the input parameters like gender, age, bmi value, various diseases, and smoking status.
 ## Built using:
 - [Scikit Learn: ](https://scikit-learn.org/stable/) ML Library used
 - [TensorFlow Keras: ](https://www.tensorflow.org/api_docs/python/tf/keras) ML Libraries used
